@@ -4,7 +4,7 @@ Designed by: The Eye
 Programmed by: Jacob Joaquin
 */
 
-DisorientFont df = new DisorientFont();
+FontDisorient2017 df = new FontDisorient2017();
 
 void settings() {
   size(880, 650);

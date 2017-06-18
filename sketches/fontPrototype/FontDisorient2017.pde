@@ -1,13 +1,13 @@
 import java.util.Hashtable;
 
-class DisorientFont {
+class FontDisorient2017 {
   protected float pixelWidth = 5;
   protected float pixelHeight = 5;
   protected float fontHeight = 8;
-  protected Hashtable<Character, DataFont> disorientFont = new Hashtable<Character, DataFont>();
+  protected Hashtable<Character, DataFont> FontDisorient2017 = new Hashtable<Character, DataFont>();
 
-  DisorientFont() {
-    println("DisorientFont() called");
+  FontDisorient2017() {
+    println("FontDisorient2017() called");
     init();
   }
 
@@ -27,8 +27,8 @@ class DisorientFont {
 
     ellipseMode(CENTER);
     for (char c : s.toCharArray()) {
-      if (disorientFont.containsKey(c)) {
-        DataFont f = disorientFont.get(c);
+      if (FontDisorient2017.containsKey(c)) {
+        DataFont f = FontDisorient2017.get(c);
         int w = f.getWidth();
         for (int y = 0; y < 8; y++) {
           pushMatrix();
@@ -61,12 +61,12 @@ class DisorientFont {
   }
 
   protected int getCharWidth(char c) {
-    return disorientFont.get(c).getWidth();
+    return FontDisorient2017.get(c).getWidth();
   }
 
 
   protected void init() {
-    disorientFont.put(' ', new DataFont(String.join("\n",
+    FontDisorient2017.put(' ', new DataFont(String.join("\n",
     "    ",
     "    ",
     "    ",
@@ -76,7 +76,7 @@ class DisorientFont {
     "    ",
     "    ")));
 
-    disorientFont.put('a', new DataFont(String.join("\n",
+    FontDisorient2017.put('a', new DataFont(String.join("\n",
     " xxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -86,7 +86,7 @@ class DisorientFont {
     "xx      xx",
     "xx      xx")));
 
-    disorientFont.put('b', new DataFont(String.join("\n",
+    FontDisorient2017.put('b', new DataFont(String.join("\n",
     "xxxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -96,7 +96,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "xxxxxxxxx ")));
 
-    disorientFont.put('c', new DataFont(String.join("\n",
+    FontDisorient2017.put('c', new DataFont(String.join("\n",
     " xxxxxxxxx",
     "xxxxxxxxxx",
     "xx        ",
@@ -106,7 +106,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxxx")));
 
-    disorientFont.put('d', new DataFont(String.join("\n",
+    FontDisorient2017.put('d', new DataFont(String.join("\n",
     "xxxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -116,7 +116,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "xxxxxxxxx ")));
 
-    disorientFont.put('e', new DataFont(String.join("\n",
+    FontDisorient2017.put('e', new DataFont(String.join("\n",
     " xxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -126,7 +126,7 @@ class DisorientFont {
     "xxxxxxxxx ",
     " xxxxxxxx ")));
 
-    disorientFont.put('f', new DataFont(String.join("\n",
+    FontDisorient2017.put('f', new DataFont(String.join("\n",
     " xxxxxxxxx",
     "xxxxxxxxxx",
     "xx        ",
@@ -136,7 +136,7 @@ class DisorientFont {
     "xx        ",
     "xx        ")));
 
-    disorientFont.put('g', new DataFont(String.join("\n",
+    FontDisorient2017.put('g', new DataFont(String.join("\n",
     " xxxxxxxxx",
     "xxxxxxxxxx",
     "xx        ",
@@ -146,7 +146,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxxX")));
 
-    disorientFont.put('h', new DataFont(String.join("\n",
+    FontDisorient2017.put('h', new DataFont(String.join("\n",
     "xx      xx",
     "xx      xx",
     "xx      xx",
@@ -156,7 +156,7 @@ class DisorientFont {
     "xx      xx",
     "xx      xx")));
 
-    disorientFont.put('i', new DataFont(String.join("\n",
+    FontDisorient2017.put('i', new DataFont(String.join("\n",
     "xx",
     "xx",
     "  ",
@@ -166,7 +166,7 @@ class DisorientFont {
     "xx",
     "xx")));
 
-    disorientFont.put('j', new DataFont(String.join("\n",
+    FontDisorient2017.put('j', new DataFont(String.join("\n",
     "        xx",
     "        xx",
     "          ",
@@ -176,7 +176,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxx ")));
 
-    disorientFont.put('k', new DataFont(String.join("\n",
+    FontDisorient2017.put('k', new DataFont(String.join("\n",
     "xx      xx",
     "xx      xx",
     "xx      xx",
@@ -186,7 +186,7 @@ class DisorientFont {
     "xx      xx",
     "xx      xx")));
 
-    disorientFont.put('l', new DataFont(String.join("\n",
+    FontDisorient2017.put('l', new DataFont(String.join("\n",
     "xx        ",
     "xx        ",
     "xx        ",
@@ -196,7 +196,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxxx")));
 
-    disorientFont.put('m', new DataFont(String.join("\n",
+    FontDisorient2017.put('m', new DataFont(String.join("\n",
     "xxxxxxxxx ",
     "xxxxxxxxxx",
     "xx  xx  xx",
@@ -206,7 +206,7 @@ class DisorientFont {
     "xx  xx  xx",
     "xx  xx  xx")));
 
-    disorientFont.put('n', new DataFont(String.join("\n",
+    FontDisorient2017.put('n', new DataFont(String.join("\n",
     "xxxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -216,7 +216,7 @@ class DisorientFont {
     "xx      xx",
     "xx      xx")));
 
-    disorientFont.put('o', new DataFont(String.join("\n",
+    FontDisorient2017.put('o', new DataFont(String.join("\n",
     " xxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -226,7 +226,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxx ")));
 
-    disorientFont.put('p', new DataFont(String.join("\n",
+    FontDisorient2017.put('p', new DataFont(String.join("\n",
     "xxxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -236,7 +236,7 @@ class DisorientFont {
     "xx        ",
     "xx        ")));
 
-    disorientFont.put('q', new DataFont(String.join("\n",
+    FontDisorient2017.put('q', new DataFont(String.join("\n",
     " xxxxxxxxx",
     "xxxxxxxxxx",
     "xx      xx",
@@ -246,7 +246,7 @@ class DisorientFont {
     "        xx",
     "        xx")));
 
-    disorientFont.put('r', new DataFont(String.join("\n",
+    FontDisorient2017.put('r', new DataFont(String.join("\n",
     "xxxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -256,7 +256,7 @@ class DisorientFont {
     "xx     xxx",
     "xx      xx")));
 
-    disorientFont.put('s', new DataFont(String.join("\n",
+    FontDisorient2017.put('s', new DataFont(String.join("\n",
     " xxxxxxxxx",
     "xxxxxxxxxx",
     "xx        ",
@@ -266,7 +266,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "xxxxxxxxx ")));
 
-    disorientFont.put('t', new DataFont(String.join("\n",
+    FontDisorient2017.put('t', new DataFont(String.join("\n",
     "xxxxxxxxxx",
     "xxxxxxxxxx",
     "    xx    ",
@@ -276,7 +276,7 @@ class DisorientFont {
     "    xx    ",
     "    xx    ")));
 
-    disorientFont.put('u', new DataFont(String.join("\n",
+    FontDisorient2017.put('u', new DataFont(String.join("\n",
     "xx      xx",
     "xx      xx",
     "xx      xx",
@@ -286,7 +286,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxx ")));
 
-    disorientFont.put('v', new DataFont(String.join("\n",
+    FontDisorient2017.put('v', new DataFont(String.join("\n",
     "xx      xx",
     "xx      xx",
     "xx      xx",
@@ -296,7 +296,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "xxxxxxxxx ")));
 
-    disorientFont.put('w', new DataFont(String.join("\n",
+    FontDisorient2017.put('w', new DataFont(String.join("\n",
     "xx  xx  xx",
     "xx  xx  xx",
     "xx  xx  xx",
@@ -306,7 +306,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "xxxxxxxxx ")));
 
-    disorientFont.put('x', new DataFont(String.join("\n",
+    FontDisorient2017.put('x', new DataFont(String.join("\n",
     "xx      xx",
     "xx      xx",
     "xx      xx",
@@ -316,7 +316,7 @@ class DisorientFont {
     "xx      xx",
     "xx      xx")));
 
-    disorientFont.put('y', new DataFont(String.join("\n",
+    FontDisorient2017.put('y', new DataFont(String.join("\n",
     "xx      xx",
     "xx      xx",
     "xx      xx",
@@ -327,7 +327,7 @@ class DisorientFont {
     " xxxxxxxx ")));
 
 
-    disorientFont.put('z', new DataFont(String.join("\n",
+    FontDisorient2017.put('z', new DataFont(String.join("\n",
     "xxxxxxxxxx",
     "xxxxxxxxxx",
     "        xx",
@@ -337,7 +337,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "xxxxxxxxxx")));
 
-    disorientFont.put('A', new DataFont(String.join("\n",
+    FontDisorient2017.put('A', new DataFont(String.join("\n",
     " xxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -347,7 +347,7 @@ class DisorientFont {
     "xx      xx",
     "xx      xx")));
 
-    disorientFont.put('B', new DataFont(String.join("\n",
+    FontDisorient2017.put('B', new DataFont(String.join("\n",
     "xxxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -357,7 +357,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "xxxxxxxxx ")));
 
-    disorientFont.put('C', new DataFont(String.join("\n",
+    FontDisorient2017.put('C', new DataFont(String.join("\n",
     " xxxxxxxxx",
     "xxxxxxxxxx",
     "xx        ",
@@ -367,7 +367,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxxx")));
 
-    disorientFont.put('D', new DataFont(String.join("\n",
+    FontDisorient2017.put('D', new DataFont(String.join("\n",
     "xxxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -377,7 +377,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "xxxxxxxxx ")));
 
-    disorientFont.put('E', new DataFont(String.join("\n",
+    FontDisorient2017.put('E', new DataFont(String.join("\n",
     " xxxxxxxxx",
     "xxxxxxxxxx",
     "xx        ",
@@ -387,7 +387,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxxx")));
 
-    disorientFont.put('F', new DataFont(String.join("\n",
+    FontDisorient2017.put('F', new DataFont(String.join("\n",
     " xxxxxxxxx",
     "xxxxxxxxxx",
     "xx        ",
@@ -397,7 +397,7 @@ class DisorientFont {
     "xx        ",
     "xx        ")));
 
-    disorientFont.put('G', new DataFont(String.join("\n",
+    FontDisorient2017.put('G', new DataFont(String.join("\n",
     " xxxxxxxxx",
     "xxxxxxxxxx",
     "xx        ",
@@ -407,7 +407,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxxx")));
 
-    disorientFont.put('H', new DataFont(String.join("\n",
+    FontDisorient2017.put('H', new DataFont(String.join("\n",
     "xx      xx",
     "xx      xx",
     "xx      xx",
@@ -417,7 +417,7 @@ class DisorientFont {
     "xx      xx",
     "xx      xx")));
 
-    disorientFont.put('I', new DataFont(String.join("\n",
+    FontDisorient2017.put('I', new DataFont(String.join("\n",
     "xx",
     "xx",
     "xx",
@@ -427,7 +427,7 @@ class DisorientFont {
     "xx",
     "xx")));
 
-    disorientFont.put('J', new DataFont(String.join("\n",
+    FontDisorient2017.put('J', new DataFont(String.join("\n",
     "        xx",
     "        xx",
     "        xx",
@@ -437,7 +437,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxx ")));
 
-    disorientFont.put('K', new DataFont(String.join("\n",
+    FontDisorient2017.put('K', new DataFont(String.join("\n",
     "xx      xx",
     "xx      xx",
     "xx      xx",
@@ -447,7 +447,7 @@ class DisorientFont {
     "xx      xx",
     "xx      xx")));
 
-    disorientFont.put('L', new DataFont(String.join("\n",
+    FontDisorient2017.put('L', new DataFont(String.join("\n",
     "xx        ",
     "xx        ",
     "xx        ",
@@ -457,7 +457,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxxx")));
 
-    disorientFont.put('M', new DataFont(String.join("\n",
+    FontDisorient2017.put('M', new DataFont(String.join("\n",
     "xxxxxxxxx ",
     "xxxxxxxxxx",
     "xx  xx  xx",
@@ -467,7 +467,7 @@ class DisorientFont {
     "xx  xx  xx",
     "xx  xx  xx")));
 
-    disorientFont.put('N', new DataFont(String.join("\n",
+    FontDisorient2017.put('N', new DataFont(String.join("\n",
     "xxx     xx",
     "xxxx    xx",
     "xxxxx   xx",
@@ -477,7 +477,7 @@ class DisorientFont {
     "xx    xxxx",
     "xx     xxx")));
 
-    disorientFont.put('O', new DataFont(String.join("\n",
+    FontDisorient2017.put('O', new DataFont(String.join("\n",
     " xxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -487,7 +487,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxx ")));
 
-    disorientFont.put('P', new DataFont(String.join("\n",
+    FontDisorient2017.put('P', new DataFont(String.join("\n",
     "xxxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -497,7 +497,7 @@ class DisorientFont {
     "xx        ",
     "xx        ")));
 
-    disorientFont.put('Q', new DataFont(String.join("\n",
+    FontDisorient2017.put('Q', new DataFont(String.join("\n",
     " xxxxxxx  ",
     "xxxxxxxxx ",
     "xx     xx ",
@@ -507,7 +507,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxxx")));
 
-    disorientFont.put('R', new DataFont(String.join("\n",
+    FontDisorient2017.put('R', new DataFont(String.join("\n",
     "xxxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -517,7 +517,7 @@ class DisorientFont {
     "xx     xxx",
     "xx      xx")));
 
-    disorientFont.put('S', new DataFont(String.join("\n",
+    FontDisorient2017.put('S', new DataFont(String.join("\n",
     " xxxxxxxxx",
     "xxxxxxxxxx",
     "xx        ",
@@ -527,7 +527,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "xxxxxxxxx ")));
 
-    disorientFont.put('T', new DataFont(String.join("\n",
+    FontDisorient2017.put('T', new DataFont(String.join("\n",
     "xxxxxxxxxx",
     "xxxxxxxxxx",
     "    xx    ",
@@ -537,7 +537,7 @@ class DisorientFont {
     "    xx    ",
     "    xx    ")));
 
-    disorientFont.put('U', new DataFont(String.join("\n",
+    FontDisorient2017.put('U', new DataFont(String.join("\n",
     "xx      xx",
     "xx      xx",
     "xx      xx",
@@ -547,7 +547,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxx ")));
 
-    disorientFont.put('V', new DataFont(String.join("\n",
+    FontDisorient2017.put('V', new DataFont(String.join("\n",
     "xx      xx",
     "xx      xx",
     "xx      xx",
@@ -557,7 +557,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "xxxxxxxxx ")));
 
-    disorientFont.put('W', new DataFont(String.join("\n",
+    FontDisorient2017.put('W', new DataFont(String.join("\n",
     "xx  xx  xx",
     "xx  xx  xx",
     "xx  xx  xx",
@@ -567,7 +567,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "xxxxxxxxx ")));
 
-    disorientFont.put('X', new DataFont(String.join("\n",
+    FontDisorient2017.put('X', new DataFont(String.join("\n",
     "xx      xx",
     "xx      xx",
     "xx      xx",
@@ -577,7 +577,7 @@ class DisorientFont {
     "xx      xx",
     "xx      xx")));
 
-    disorientFont.put('Y', new DataFont(String.join("\n",
+    FontDisorient2017.put('Y', new DataFont(String.join("\n",
     "xx      xx",
     "xx      xx",
     "xx      xx",
@@ -588,7 +588,7 @@ class DisorientFont {
     " xxxxxxxx ")));
 
 
-    disorientFont.put('Z', new DataFont(String.join("\n",
+    FontDisorient2017.put('Z', new DataFont(String.join("\n",
     "xxxxxxxxxx",
     "xxxxxxxxxx",
     "        xx",
@@ -598,7 +598,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "xxxxxxxxxx")));
 
-    disorientFont.put('1', new DataFont(String.join("\n",
+    FontDisorient2017.put('1', new DataFont(String.join("\n",
     "xxx ",
     "xxxx",
     "  xx",
@@ -608,7 +608,7 @@ class DisorientFont {
     "  xx",
     "  xx")));
 
-    disorientFont.put('2', new DataFont(String.join("\n",
+    FontDisorient2017.put('2', new DataFont(String.join("\n",
     "xxxxxxxxx ",
     "xxxxxxxxxx",
     "        xx",
@@ -618,7 +618,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "xxxxxxxxxx")));
 
-    disorientFont.put('3', new DataFont(String.join("\n",
+    FontDisorient2017.put('3', new DataFont(String.join("\n",
     "xxxxxxxxx ",
     "xxxxxxxxxx",
     "        xx",
@@ -628,7 +628,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "xxxxxxxxx ")));
 
-    disorientFont.put('4', new DataFont(String.join("\n",
+    FontDisorient2017.put('4', new DataFont(String.join("\n",
     "xx    xx  ",
     "xx    xx  ",
     "xx    xx  ",
@@ -638,7 +638,7 @@ class DisorientFont {
     "      xx  ",
     "      xx  ")));
 
-    disorientFont.put('5', new DataFont(String.join("\n",
+    FontDisorient2017.put('5', new DataFont(String.join("\n",
     "xxxxxxxxxx",
     "xxxxxxxxxx",
     "xx        ",
@@ -648,7 +648,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "xxxxxxxxx ")));
 
-    disorientFont.put('6', new DataFont(String.join("\n",
+    FontDisorient2017.put('6', new DataFont(String.join("\n",
     " xxxxxxxx ",
     "xxxxxxxxx ",
     "xx        ",
@@ -658,7 +658,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxx ")));
 
-    disorientFont.put('7', new DataFont(String.join("\n",
+    FontDisorient2017.put('7', new DataFont(String.join("\n",
     "xxxxxxxxx ",
     "xxxxxxxxxx",
     "        xx",
@@ -668,7 +668,7 @@ class DisorientFont {
     "        xx",
     "        xx")));
 
-    disorientFont.put('8', new DataFont(String.join("\n",
+    FontDisorient2017.put('8', new DataFont(String.join("\n",
     " xxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -678,7 +678,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxx ")));
 
-    disorientFont.put('9', new DataFont(String.join("\n",
+    FontDisorient2017.put('9', new DataFont(String.join("\n",
     " xxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -688,7 +688,7 @@ class DisorientFont {
     " xxxxxxxxx",
     " xxxxxxxx ")));
 
-    disorientFont.put('0', new DataFont(String.join("\n",
+    FontDisorient2017.put('0', new DataFont(String.join("\n",
     " xxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -698,7 +698,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxx ")));
 
-    disorientFont.put('~', new DataFont(String.join("\n",
+    FontDisorient2017.put('~', new DataFont(String.join("\n",
     "xxxx",
     "xxxx",
     "    ",
@@ -708,7 +708,7 @@ class DisorientFont {
     "    ",
     "    ")));
 
-    disorientFont.put('`', new DataFont(String.join("\n",
+    FontDisorient2017.put('`', new DataFont(String.join("\n",
     "xx ",
     "xxx",
     " xx",
@@ -718,7 +718,7 @@ class DisorientFont {
     "   ",
     "   ")));
 
-    disorientFont.put('!', new DataFont(String.join("\n",
+    FontDisorient2017.put('!', new DataFont(String.join("\n",
     "xx",
     "xx",
     "xx",
@@ -728,7 +728,7 @@ class DisorientFont {
     "xx",
     "xx")));
 
-    disorientFont.put('@', new DataFont(String.join("\n",
+    FontDisorient2017.put('@', new DataFont(String.join("\n",
     " xxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -738,7 +738,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxxxx ")));
 
-    disorientFont.put('#', new DataFont(String.join("\n",
+    FontDisorient2017.put('#', new DataFont(String.join("\n",
     "  xx  xx  ",
     "xxxxxxxxxx",
     "xxxxxxxxxx",
@@ -748,7 +748,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "  xx  xx  ")));
 
-    disorientFont.put('$', new DataFont(String.join("\n",
+    FontDisorient2017.put('$', new DataFont(String.join("\n",
     " xxxxxxxxx",
     "xxxxxxxxxx",
     "xx  xx    ",
@@ -758,7 +758,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "xxxxxxxxx ")));
 
-    disorientFont.put('%', new DataFont(String.join("\n",
+    FontDisorient2017.put('%', new DataFont(String.join("\n",
     "xxx    xx ",
     "xxx   xxx ",
     "xxx  xxx  ",
@@ -768,7 +768,7 @@ class DisorientFont {
     " xxx   xxx",
     " xx    xxx")));
 
-    disorientFont.put('^', new DataFont(String.join("\n",
+    FontDisorient2017.put('^', new DataFont(String.join("\n",
     "  xx  ",
     "xxxxxx",
     "xx  xx",
@@ -778,7 +778,7 @@ class DisorientFont {
     "      ",
     "      ")));
 
-    disorientFont.put('&', new DataFont(String.join("\n",
+    FontDisorient2017.put('&', new DataFont(String.join("\n",
     " xxxxxx   ",
     "xxxxxxxx  ",
     "xx    xx  ",
@@ -788,7 +788,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     " xxxxxx xx")));
 
-    disorientFont.put('*', new DataFont(String.join("\n",
+    FontDisorient2017.put('*', new DataFont(String.join("\n",
     "xx  xx  xx",
     "xxx xx xxx",
     " xxxxxxxx ",
@@ -798,7 +798,7 @@ class DisorientFont {
     "xxx xx xxx",
     "xx  xx  xx")));
 
-    disorientFont.put('(', new DataFont(String.join("\n",
+    FontDisorient2017.put('(', new DataFont(String.join("\n",
     "  xx",
     " xxx",
     "xxx ",
@@ -808,7 +808,7 @@ class DisorientFont {
     " xxx",
     "  xx")));
 
-    disorientFont.put(')', new DataFont(String.join("\n",
+    FontDisorient2017.put(')', new DataFont(String.join("\n",
     "xx  ",
     "xxx ",
     " xxx",
@@ -818,7 +818,7 @@ class DisorientFont {
     "xxx ",
     "xx  ")));
 
-    disorientFont.put('_', new DataFont(String.join("\n",
+    FontDisorient2017.put('_', new DataFont(String.join("\n",
     "          ",
     "          ",
     "          ",
@@ -828,7 +828,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "xxxxxxxxxx")));
 
-    disorientFont.put('-', new DataFont(String.join("\n",
+    FontDisorient2017.put('-', new DataFont(String.join("\n",
     "          ",
     "          ",
     "          ",
@@ -838,7 +838,7 @@ class DisorientFont {
     "          ",
     "          ")));
 
-    disorientFont.put('+', new DataFont(String.join("\n",
+    FontDisorient2017.put('+', new DataFont(String.join("\n",
     "    xx    ",
     "    xx    ",
     "    xx    ",
@@ -848,7 +848,7 @@ class DisorientFont {
     "    xx    ",
     "    xx    ")));
 
-    disorientFont.put('=', new DataFont(String.join("\n",
+    FontDisorient2017.put('=', new DataFont(String.join("\n",
     "          ",
     "xxxxxxxxxx",
     "xxxxxxxxxx",
@@ -858,7 +858,7 @@ class DisorientFont {
     "xxxxxxxxxx",
     "          ")));
 
-    disorientFont.put('[', new DataFont(String.join("\n",
+    FontDisorient2017.put('[', new DataFont(String.join("\n",
     "xxxx",
     "xxxx",
     "xx  ",
@@ -868,7 +868,7 @@ class DisorientFont {
     "xxxx",
     "xxxx")));
 
-    disorientFont.put('{', new DataFont(String.join("\n",
+    FontDisorient2017.put('{', new DataFont(String.join("\n",
     "  xx",
     " xxx",
     " xx ",
@@ -878,7 +878,7 @@ class DisorientFont {
     " xxx",
     "  xx")));
 
-    disorientFont.put('}', new DataFont(String.join("\n",
+    FontDisorient2017.put('}', new DataFont(String.join("\n",
     "xx  ",
     "xxx ",
     " xx ",
@@ -888,7 +888,7 @@ class DisorientFont {
     "xxx ",
     "xx  ")));
 
-    disorientFont.put(']', new DataFont(String.join("\n",
+    FontDisorient2017.put(']', new DataFont(String.join("\n",
     "xxxx",
     "xxxx",
     "  xx",
@@ -898,7 +898,7 @@ class DisorientFont {
     "xxxx",
     "xxxx")));
 
-    disorientFont.put('\\', new DataFont(String.join("\n",
+    FontDisorient2017.put('\\', new DataFont(String.join("\n",
     "xx      ",
     "xxx     ",
     " xxx    ",
@@ -908,7 +908,7 @@ class DisorientFont {
     "     xxx",
     "      xx")));
 
-    disorientFont.put(':', new DataFont(String.join("\n",
+    FontDisorient2017.put(':', new DataFont(String.join("\n",
     "  ",
     "xx",
     "xx",
@@ -918,7 +918,7 @@ class DisorientFont {
     "xx",
     "  ")));
 
-    disorientFont.put(';', new DataFont(String.join("\n",
+    FontDisorient2017.put(';', new DataFont(String.join("\n",
     "  ",
     "xx",
     "xx",
@@ -928,7 +928,7 @@ class DisorientFont {
     "xx",
     "xx")));
 
-    disorientFont.put('\'', new DataFont(String.join("\n",
+    FontDisorient2017.put('\'', new DataFont(String.join("\n",
     "xx",
     "xx",
     "xx",
@@ -938,7 +938,7 @@ class DisorientFont {
     "  ",
     "  ")));
 
-    disorientFont.put('"', new DataFont(String.join("\n",
+    FontDisorient2017.put('"', new DataFont(String.join("\n",
     "xx xx",
     "xx xx",
     "xx xx",
@@ -948,7 +948,7 @@ class DisorientFont {
     "     ",
     "     ")));
 
-    disorientFont.put('>', new DataFont(String.join("\n",
+    FontDisorient2017.put('>', new DataFont(String.join("\n",
     "xx   ",
     "xxx  ",
     " xxx ",
@@ -958,7 +958,7 @@ class DisorientFont {
     "xxx  ",
     "xx   ")));
 
-    disorientFont.put('<', new DataFont(String.join("\n",
+    FontDisorient2017.put('<', new DataFont(String.join("\n",
     "   xx",
     "  xxx",
     " xxx ",
@@ -968,7 +968,7 @@ class DisorientFont {
     "  xxx",
     "   xx")));
 
-    disorientFont.put('?', new DataFont(String.join("\n",
+    FontDisorient2017.put('?', new DataFont(String.join("\n",
     " xxxxxxxx ",
     "xxxxxxxxxx",
     "xx      xx",
@@ -978,7 +978,7 @@ class DisorientFont {
     "    xx    ",
     "    xx    ")));
 
-    disorientFont.put(',', new DataFont(String.join("\n",
+    FontDisorient2017.put(',', new DataFont(String.join("\n",
     "  ",
     "  ",
     "  ",
@@ -988,7 +988,7 @@ class DisorientFont {
     "xx",
     "xx")));
 
-    disorientFont.put('.', new DataFont(String.join("\n",
+    FontDisorient2017.put('.', new DataFont(String.join("\n",
     "  ",
     "  ",
     "  ",
@@ -998,7 +998,7 @@ class DisorientFont {
     "xx",
     "xx")));
 
-    disorientFont.put('/', new DataFont(String.join("\n",
+    FontDisorient2017.put('/', new DataFont(String.join("\n",
     "      xx",
     "     xxx",
     "    xxx ",
