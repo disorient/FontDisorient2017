@@ -29,8 +29,15 @@ void createFont() {
     ArrayList<PVector> list = df.getPoints(c);
 
     FGlyph glyph = f.addGlyph(c);
+
     for (PVector p : list) {
-      float s = (float) fWidth / 11.0;
+      float w = df.getCharWidth(c);
+      float s = (float) fWidth / 10.0;
+      // float s = (float) fWidth / 10.0;
+      glyph.setAdvanceWidth((int) (fWidth * w / 10.0 + fWidth * 0.1));
+      // glyph.setAdvanceWidth((int) (fWidth / (float) 10.0 + fWidth / 10.0));
+
+
       PVector[] points = new PVector[4];
       float y = 7 - p.y;
       points[0] = new PVector(p.x * s, y * s);

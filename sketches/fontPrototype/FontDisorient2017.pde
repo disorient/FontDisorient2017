@@ -84,7 +84,7 @@ class FontDisorient2017 {
     return list;
   }
 
-  protected int getCharWidth(char c) {
+  int getCharWidth(char c) {
     return fontDisorient2017.get(c).getWidth();
   }
 
