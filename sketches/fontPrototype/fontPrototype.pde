@@ -4,7 +4,46 @@ Designed by: The Eye
 Programmed by: Jacob Joaquin
 */
 
+import fontastic.*;
+
+Fontastic f;
+int version = 0;
+int fWidth = 1384;
+
 FontDisorient2017 df = new FontDisorient2017();
+
+void createFont() {
+  version++;
+
+  if (f != null) { f.cleanup(); }
+
+  f = new Fontastic(this, "Disorient 2017 " + nf(version,4));
+
+  f.setAuthor("the eye");
+  f.setVersion("0.1");
+  f.setAdvanceWidth(fWidth);
+
+  Enumeration<Character> keys = df.getKeys();
+  while(keys.hasMoreElements()) {
+    Character c = keys.nextElement();
+    ArrayList<PVector> list = df.getPoints(c);
+
+    FGlyph glyph = f.addGlyph(c);
+    for (PVector p : list) {
+      float s = (float) fWidth / 11.0;
+      PVector[] points = new PVector[4];
+      float y = 7 - p.y;
+      points[0] = new PVector(p.x * s, y * s);
+      points[1] = new PVector(p.x * s + s, y * s);
+      points[2] = new PVector(p.x * s + s, y * s + s);
+      points[3] = new PVector(p.x * s, y * s + s);
+      glyph.addContour(points);
+    }
+
+  }
+  f.buildFont();
+  f.cleanup();
+}
 
 void settings() {
   size(880, 650);
@@ -12,10 +51,12 @@ void settings() {
 }
 
 void setup() {
+  createFont();
   noLoop();
   background(255);
   noStroke();
   fill(0);
+
   df.setHeight(60);
   df.text("abcdefghi", 10, 10);
   df.text("jklmnopqr", 10, 80);
