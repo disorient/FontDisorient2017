@@ -4,7 +4,10 @@ Designed by: The Eye
 Programmed by: Jacob Joaquin
 */
 
+import fontastic.*;
+
 FontDisorient2017 df = new FontDisorient2017();
+boolean renderFont = false;
 
 void settings() {
   size(880, 650);
@@ -12,10 +15,14 @@ void settings() {
 }
 
 void setup() {
+  if (renderFont) {
+    createFont();
+  }
   noLoop();
   background(255);
   noStroke();
   fill(0);
+
   df.setHeight(60);
   df.text("abcdefghi", 10, 10);
   df.text("jklmnopqr", 10, 80);
