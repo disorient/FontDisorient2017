@@ -6,9 +6,10 @@ Programmed by: Jacob Joaquin
 
 import fontastic.*;
 
+boolean renderFont = true;
 Fontastic f;
 int version = 0;
-int fWidth = 1384;
+int fWidth = 1250;
 
 FontDisorient2017 df = new FontDisorient2017();
 
@@ -33,10 +34,8 @@ void createFont() {
     for (PVector p : list) {
       float w = df.getCharWidth(c);
       float s = (float) fWidth / 10.0;
-      // float s = (float) fWidth / 10.0;
-      glyph.setAdvanceWidth((int) (fWidth * w / 10.0 + fWidth * 0.1));
-      // glyph.setAdvanceWidth((int) (fWidth / (float) 10.0 + fWidth / 10.0));
 
+      glyph.setAdvanceWidth((int) (fWidth * w / 10.0 + fWidth * 0.1));
 
       PVector[] points = new PVector[4];
       float y = 7 - p.y;
@@ -58,7 +57,9 @@ void settings() {
 }
 
 void setup() {
-  createFont();
+  if (renderFont) {
+    createFont();
+  }
   noLoop();
   background(255);
   noStroke();
