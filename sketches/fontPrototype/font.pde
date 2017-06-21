@@ -68,6 +68,39 @@ void createFontCircles() {
 
       glyph.setAdvanceWidth((int) (fWidth * w / 10.0 + fWidth * 0.1));
 
+      // FPoint[] points = new FPoint[4];
+      // float s2 = s / 2.0 * 0.49;
+      // float s3 = s2 * 0.552284749831;
+      // float x = p.x;
+      // float y = 7 - p.y;
+      // x *= s - s * 0.5;
+      // y *= s - s * 0.5;
+      //
+      // s3 *= -1;
+      //
+      // points[0] = new FPoint(x + s2, y + 0);
+      // points[0].setControlPoint1(x + s2, y + -s3);
+      // points[0].setControlPoint2(x + s2, y + s3);
+      //
+      // points[1] = new FPoint(x + 0, y + -s2);
+      // points[1].setControlPoint1(x + -s3, y + -s2);
+      // points[1].setControlPoint2(x + s3, y + -s2);
+      //
+      // points[2] = new FPoint(x + -s2, y + 0);
+      // points[2].setControlPoint1(x + -s2, y + s3);
+      // points[2].setControlPoint2(x + -s2, y + -s3);
+      //
+      // points[3] = new FPoint(x + 0, y + s2);
+      // points[3].setControlPoint1(x + s3, y + s2);
+      // points[3].setControlPoint2(x + -s3, y + s2);
+      //
+      // glyph.addContour(points);
+
+
+
+      int nPoints = 4;
+      float radius = s * 0.5 * 0.49;
+      float controlLength = (4.0 / 3.0) * tan(PI / (2.0 * nPoints)) * s;
       FPoint[] points = new FPoint[4];
       float s2 = s / 2.0 * 0.49;
       float s3 = s2 * 0.552284749831;
@@ -78,27 +111,42 @@ void createFontCircles() {
 
       s3 *= -1;
 
-      points[0] = new FPoint(x + s2, y + 0);
-      points[0].setControlPoint1(x + s2, y + -s3);
-      points[0].setControlPoint2(x + s2, y + s3);
+      for (int i = 0; i < nPoints; i++) {
+        float n = (float) i / (float) nPoints;
+        float a = n * TAU;
 
-      points[1] = new FPoint(x + 0, y + -s2);
-      points[1].setControlPoint1(x + -s3, y + -s2);
-      points[1].setControlPoint2(x + s3, y + -s2);
+        PVector point = PVector.fromAngle(a).mult(radius).add(x, y);
+        PVector cPoint1 = PVector.fromAngle(HALF_PI).mult(controlLength);
+        cPoint1 = point.copy().add(cPoint1);
+        PVector cPoint2 = PVector.fromAngle(-HALF_PI).mult(controlLength);
+        cPoint2 = point.copy().add(cPoint1);
 
-      points[2] = new FPoint(x + -s2, y + 0);
-      points[2].setControlPoint1(x + -s2, y + s3);
-      points[2].setControlPoint2(x + -s2, y + -s3);
+        points[i] = new FPoint(point.x, point.y);
+        points[i].setControlPoint1(cPoint1.x, cPoint1.y);
+        points[i].setControlPoint2(cPoint2.x, cPoint2.y);
+      }
 
-      points[3] = new FPoint(x + 0, y + s2);
-      points[3].setControlPoint1(x + s3, y + s2);
-      points[3].setControlPoint2(x + -s3, y + s2);
-
-      // points[4] = new FPoint(x + s2, y + 0);
-      // points[4].setControlPoint1(x + s2, y + -s3);
-      // points[4].setControlPoint2(x + s2, y + s3);
+      // points[0] = new FPoint(x + s2, y + 0);
+      // points[0].setControlPoint1(x + s2, y + -s3);
+      // points[0].setControlPoint2(x + s2, y + s3);
+      //
+      // points[1] = new FPoint(x + 0, y + -s2);
+      // points[1].setControlPoint1(x + -s3, y + -s2);
+      // points[1].setControlPoint2(x + s3, y + -s2);
+      //
+      // points[2] = new FPoint(x + -s2, y + 0);
+      // points[2].setControlPoint1(x + -s2, y + s3);
+      // points[2].setControlPoint2(x + -s2, y + -s3);
+      //
+      // points[3] = new FPoint(x + 0, y + s2);
+      // points[3].setControlPoint1(x + s3, y + s2);
+      // points[3].setControlPoint2(x + -s3, y + s2);
 
       glyph.addContour(points);
+
+
+
+
 
       // f.addGlyph(c).addContour(points);
 
