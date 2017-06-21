@@ -2,7 +2,7 @@ Fontastic f;
 
 void createFont() {
   int fWidth = 1250;
-  int version = 2;
+  int version = 3;
 
   if (f != null) {
     f.cleanup();
@@ -98,54 +98,31 @@ void createFontCircles() {
 
 
 
-      int nPoints = 4;
+      int nPoints = 6;
+      FPoint[] points = new FPoint[nPoints];
       float radius = s * 0.5 * 0.49;
-      float controlLength = (4.0 / 3.0) * tan(PI / (2.0 * nPoints)) * s;
-      FPoint[] points = new FPoint[4];
-      float s2 = s / 2.0 * 0.49;
-      float s3 = s2 * 0.552284749831;
+      float controlLength = (4.0 / 3.0) * tan(PI / (2.0 * nPoints)) * radius;
       float x = p.x;
       float y = 7 - p.y;
       x *= s - s * 0.5;
       y *= s - s * 0.5;
-
-      s3 *= -1;
 
       for (int i = 0; i < nPoints; i++) {
         float n = (float) i / (float) nPoints;
         float a = n * TAU;
 
         PVector point = PVector.fromAngle(a).mult(radius).add(x, y);
-        PVector cPoint1 = PVector.fromAngle(HALF_PI).mult(controlLength);
+        PVector cPoint1 = PVector.fromAngle(a - HALF_PI).mult(controlLength);
         cPoint1 = point.copy().add(cPoint1);
-        PVector cPoint2 = PVector.fromAngle(-HALF_PI).mult(controlLength);
-        cPoint2 = point.copy().add(cPoint1);
+        PVector cPoint2 = PVector.fromAngle(a + HALF_PI).mult(controlLength);
+        cPoint2 = point.copy().add(cPoint2);
 
         points[i] = new FPoint(point.x, point.y);
         points[i].setControlPoint1(cPoint1.x, cPoint1.y);
         points[i].setControlPoint2(cPoint2.x, cPoint2.y);
       }
 
-      // points[0] = new FPoint(x + s2, y + 0);
-      // points[0].setControlPoint1(x + s2, y + -s3);
-      // points[0].setControlPoint2(x + s2, y + s3);
-      //
-      // points[1] = new FPoint(x + 0, y + -s2);
-      // points[1].setControlPoint1(x + -s3, y + -s2);
-      // points[1].setControlPoint2(x + s3, y + -s2);
-      //
-      // points[2] = new FPoint(x + -s2, y + 0);
-      // points[2].setControlPoint1(x + -s2, y + s3);
-      // points[2].setControlPoint2(x + -s2, y + -s3);
-      //
-      // points[3] = new FPoint(x + 0, y + s2);
-      // points[3].setControlPoint1(x + s3, y + s2);
-      // points[3].setControlPoint2(x + -s3, y + s2);
-
       glyph.addContour(points);
-
-
-
 
 
       // f.addGlyph(c).addContour(points);
