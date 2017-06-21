@@ -976,6 +976,16 @@ class FontDisorient2017 {
     "xxxx",
     "xxxx")));
 
+    fontDisorient2017.put('|', new DataFont(String.join("\n",
+    "xx",
+    "xx",
+    "xx",
+    "xx",
+    "xx",
+    "xx",
+    "xx",
+    "xx")));
+
     fontDisorient2017.put('\\', new DataFont(String.join("\n",
     "xx      ",
     "xxx     ",

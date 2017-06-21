@@ -8,7 +8,7 @@ void createFont() {
     f.cleanup();
   }
 
-  f = new Fontastic(this, "Disorient 2017 " + nf(version,4));
+  f = new Fontastic(this, "Disorient 2017 " + nf(version, 4));
 
   f.setAuthor("the eye");
   f.setVersion("0.1");
