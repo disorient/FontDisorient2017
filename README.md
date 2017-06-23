@@ -14,7 +14,7 @@ More about Disorient fonts at the [Disorient Wiki](http://wiki.disorient.info/in
 
 ## Download
 
-[Disorient_2017_0001.ttf.zip](./releases/Disorient_2017_0001.ttf.zip)
+[Disorient_2017_0001.ttf.zip](https://github.com/disorient/FontDisorient2017/raw/master/releases/Disorient_2017_0001.ttf.zip)
 
 ## About Development
 
