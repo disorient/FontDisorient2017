@@ -49,63 +49,34 @@ void createFontCircles() {
     f.cleanup();
   }
 
-  f = new Fontastic(this, "Disorient 2017 Circles " + nf(version, 4));
+  f = new Fontastic(this, "Disorient 2017 Dots " + nf(version, 4));
 
-  f.setAuthor("the eye");
+  f.setAuthor("The Eye");
   f.setVersion("0.1");
   f.setAdvanceWidth(fWidth);
+
+  float s = (float) fWidth / 10.0;
 
   Enumeration<Character> keys = df.getKeys();
   while(keys.hasMoreElements()) {
     Character c = keys.nextElement();
     ArrayList<PVector> list = df.getPoints(c);
-
     FGlyph glyph = f.addGlyph(c);
 
+    float w = df.getCharWidth(c);
+    glyph.setAdvanceWidth((int) (fWidth * w / 10.0 + fWidth * 0.1));
+
     for (PVector p : list) {
-      float w = df.getCharWidth(c);
-      float s = (float) fWidth / 10.0;
-
-      glyph.setAdvanceWidth((int) (fWidth * w / 10.0 + fWidth * 0.1));
-
-      // FPoint[] points = new FPoint[4];
-      // float s2 = s / 2.0 * 0.49;
-      // float s3 = s2 * 0.552284749831;
-      // float x = p.x;
-      // float y = 7 - p.y;
-      // x *= s - s * 0.5;
-      // y *= s - s * 0.5;
-      //
-      // s3 *= -1;
-      //
-      // points[0] = new FPoint(x + s2, y + 0);
-      // points[0].setControlPoint1(x + s2, y + -s3);
-      // points[0].setControlPoint2(x + s2, y + s3);
-      //
-      // points[1] = new FPoint(x + 0, y + -s2);
-      // points[1].setControlPoint1(x + -s3, y + -s2);
-      // points[1].setControlPoint2(x + s3, y + -s2);
-      //
-      // points[2] = new FPoint(x + -s2, y + 0);
-      // points[2].setControlPoint1(x + -s2, y + s3);
-      // points[2].setControlPoint2(x + -s2, y + -s3);
-      //
-      // points[3] = new FPoint(x + 0, y + s2);
-      // points[3].setControlPoint1(x + s3, y + s2);
-      // points[3].setControlPoint2(x + -s3, y + s2);
-      //
-      // glyph.addContour(points);
-
-
-
-      int nPoints = 6;
+      int nPoints = 8;
       FPoint[] points = new FPoint[nPoints];
-      float radius = s * 0.5 * 0.49;
-      float controlLength = (4.0 / 3.0) * tan(PI / (2.0 * nPoints)) * radius;
+      float radius = s * 0.5;
+      float controlLength = (4.0 / 3.0) * tan(PI / (2.0 * (float) nPoints)) * radius;
       float x = p.x;
-      float y = 7 - p.y;
-      x *= s - s * 0.5;
-      y *= s - s * 0.5;
+      float y = 7 - p.y;  // Invert Y
+      x *= s;
+      y *= s;
+      x += s * 0.5;
+      y += s * 0.5;
 
       for (int i = 0; i < nPoints; i++) {
         float n = (float) i / (float) nPoints;
@@ -117,31 +88,11 @@ void createFontCircles() {
         PVector cPoint2 = PVector.fromAngle(a + HALF_PI).mult(controlLength);
         cPoint2 = point.copy().add(cPoint2);
 
-        points[i] = new FPoint(point.x, point.y);
-        points[i].setControlPoint1(cPoint1.x, cPoint1.y);
-        points[i].setControlPoint2(cPoint2.x, cPoint2.y);
+        FPoint fp = new FPoint(point, cPoint1, cPoint2);
+        points[i] = fp;
       }
 
       glyph.addContour(points);
-
-
-      // f.addGlyph(c).addContour(points);
-
-      // int nPoints = 64;
-      // PVector[] points = new PVector[nPoints];
-      //
-      // for (int i = 0; i < nPoints; i++) {
-      //   float x = p.x * s;
-      //   x += s * 0.5;
-      //   float y = 7 - p.y;
-      //   y = y * s + s * 0.5;
-      //
-      //   float n = (float) i / (float) nPoints;
-      //   float a = n * TAU;
-      //   PVector p2 = PVector.fromAngle(a).mult(s * 0.5).add(x, y);
-      //   points[i] = p2;
-      // }
-      // glyph.addContour(points);
     }
   }
   f.buildFont();

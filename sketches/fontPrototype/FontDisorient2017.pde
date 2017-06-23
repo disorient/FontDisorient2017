@@ -39,8 +39,8 @@ class FontDisorient2017 {
               pushMatrix();
               noStroke();
               translate(x * pixelWidth, 0);
-              rect(0, 0, pixelWidth, pixelHeight);
-              // ellipse(0, 0, pixelWidth, pixelHeight);
+              // rect(0, 0, pixelWidth, pixelHeight);
+              ellipse(0, 0, pixelWidth, pixelHeight);
 
               // stroke(255);
               // if (random(1) < 0.5) {
