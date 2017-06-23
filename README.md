@@ -1,4 +1,4 @@
-![Disorient 2017 Character Set](./assets/Disorient2017Solid.png)
+<img src="./assets/Disorient2017Solid.png" alt="Disorient 2017 Logo" width="100%">
 
 The "Disorient 2017" font (designed by The Eye and programmed by Jacob J.) is an update and a simplification of the Disorient font. In an effort to make the font more legible while keeping its distinctive character, many letters have been fine-tuned. Also, both upper and lower cases display the same character, so you really can't go wrong. We encourage the use of this font over previous versions.
 
@@ -10,7 +10,7 @@ More about Disorient fonts at the [Disorient Wiki](http://wiki.disorient.info/in
 
 **Status:** Experimental, but working. There are validation errors when installing on OS X, but it will let you override them.
 
-![Disorient 2017 Character Set](./assets/Disorient2017SolidSet.png)
+<img src="./assets/Disorient2017SolidSet.png" alt="Disorient 2017 Character Set" width="100%">
 
 ## Download
 
