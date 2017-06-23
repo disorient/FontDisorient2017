@@ -8,14 +8,13 @@ Disorient logo and fonts should not be distorted in X or Y. Space between each 8
 
 More about Disorient fonts at the [Disorient Wiki](http://wiki.disorient.info/index.php?title=Disorient_logo#Disorient_2017).
 
-**Status:** Experimental, but working.
+**Status:** Experimental, but working. There are validation errors when installing on OS X, but it will let you override them.
 
 ![Disorient 2017 Character Set](./assets/Disorient2017SolidSet.png)
 
 ## Download
 
-[disorient_2017_0001.ttf](https://disorient.slack.com/files/jacob/F5V8ESXEV/disorient_2017_0001.ttf)
-
+[Disorient_2017_0001.ttf](./releases/Disorient_2017_0001.ttf)
 
 ## About Development
 
