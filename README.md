@@ -1,5 +1,11 @@
 <img src="./assets/Disorient2017Solid.png" alt="Disorient 2017 Logo" width="100%">
 
+## Download
+
+[Disorient_2017_Latest.zip](https://github.com/disorient/FontDisorient2017/raw/master/releases/Disorient_2017_Latest.zip) - Version 20170627
+
+# About
+
 The "Disorient 2017" font (designed by The Eye and programmed by Jacob J.) is an update and a simplification of the Disorient font. In an effort to make the font more legible while keeping its distinctive character, many letters have been fine-tuned. Also, both upper and lower cases display the same character, so you really can't go wrong. We encourage the use of this font over previous versions.
 
 The Disorient logo is used on our Signs, D-shirt, Urn, Disorient Pattern, etc. Every Disorient camper is encouraged to use the Disorient logo and the Disorient font for Disorient-related projects.
@@ -10,13 +16,9 @@ More about Disorient fonts at the [Disorient Wiki](http://wiki.disorient.info/in
 
 **Status:** Experimental, but working. There are validation errors when installing on OS X, but it will let you override them.
 
-<img src="./assets/Disorient2017SolidSet.png" alt="Disorient 2017 Character Set" width="100%">
+<img src="./assets/DisorientQuickBrownFox.png" alt="Disorient 2017 Character Set" style="max-width: 80%;">
 
-## Download
-
-[Disorient_2017_0001.ttf.zip](https://github.com/disorient/FontDisorient2017/raw/master/releases/Disorient_2017_0001.ttf.zip)
-
-## About Development
+## Development
 
 The font is generated with [Processing](https://processing.org/) and the [Fontastic Processing Library](http://code.andreaskoller.com/libraries/fontastic/).
 

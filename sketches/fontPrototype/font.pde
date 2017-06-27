@@ -1,17 +1,17 @@
 Fontastic f;
+String fontAuthor = "The Eye";
+String fontVersion = "20170627";
 
 void createFont() {
   int fWidth = 1250;
-  int version = 3;
 
   if (f != null) {
     f.cleanup();
   }
 
-  f = new Fontastic(this, "Disorient 2017 " + nf(version, 4));
-
-  f.setAuthor("the eye");
-  f.setVersion("0.1");
+  f = new Fontastic(this, "Disorient 2017 ");
+  f.setAuthor(fontAuthor);
+  f.setVersion(fontVersion);
   f.setAdvanceWidth(fWidth);
 
   Enumeration<Character> keys = df.getKeys();
@@ -39,7 +39,7 @@ void createFont() {
   f.cleanup();
 }
 
-void createFontCircles() {
+void createFontDots() {
   int fWidth = 1250;
   int version = 2;
 
@@ -47,10 +47,10 @@ void createFontCircles() {
     f.cleanup();
   }
 
-  f = new Fontastic(this, "Disorient 2017 Dots " + nf(version, 4));
+  f = new Fontastic(this, "Disorient 2017 Dots");
 
-  f.setAuthor("The Eye");
-  f.setVersion("0.1");
+  f.setAuthor(fontAuthor);
+  f.setVersion(fontVersion);
   f.setAdvanceWidth(fWidth);
 
   float s = (float) fWidth / 10.0;
@@ -64,11 +64,12 @@ void createFontCircles() {
     float w = df.getCharWidth(c);
     glyph.setAdvanceWidth((int) (fWidth * w / 10.0 + fWidth * 0.1));
 
+    int nPoints = 8;
+    float radius = s * 0.5;
+    float controlLength = (4.0 / 3.0) * tan(PI / (2.0 * (float) nPoints)) * radius;
+
     for (PVector p : list) {
-      int nPoints = 8;
       FPoint[] points = new FPoint[nPoints];
-      float radius = s * 0.5;
-      float controlLength = (4.0 / 3.0) * tan(PI / (2.0 * (float) nPoints)) * radius;
       float x = p.x;
       float y = 7 - p.y;  // Invert Y
       x *= s;
@@ -91,14 +92,6 @@ void createFontCircles() {
       }
 
       glyph.addContour(points);
-
-      PVector[] points2 = new PVector[4];
-      // float y = 7 - p.y;
-      points2[0] = new PVector(p.x * s, y * s);
-      points2[1] = new PVector(p.x * s + s * 0.5, y * s);
-      points2[2] = new PVector(p.x * s + s * 0.5, y * s + s * 0.5);
-      points2[3] = new PVector(p.x * s, y * s + s * 0.5);
-      glyph.addContour(points2);
     }
   }
   f.buildFont();
@@ -113,10 +106,9 @@ void createFontTearDrop() {
     f.cleanup();
   }
 
-  f = new Fontastic(this, "Disorient 2017 TearDrop " + nf(version, 4));
-
-  f.setAuthor("The Eye");
-  f.setVersion("0.1");
+  f = new Fontastic(this, "Disorient 2017 TearDrop");
+  f.setAuthor(fontAuthor);
+  f.setVersion(fontVersion);
   f.setAdvanceWidth(fWidth);
 
   float s = (float) fWidth / 10.0;
@@ -130,11 +122,12 @@ void createFontTearDrop() {
     float w = df.getCharWidth(c);
     glyph.setAdvanceWidth((int) (fWidth * w / 10.0 + fWidth * 0.1));
 
+    int nPoints = 8;
+    float radius = s * 0.5;
+    float controlLength = (4.0 / 3.0) * tan(PI / (2.0 * (float) nPoints)) * radius;
+
     for (PVector p : list) {
-      int nPoints = 8;
       FPoint[] points = new FPoint[nPoints];
-      float radius = s * 0.5;
-      float controlLength = (4.0 / 3.0) * tan(PI / (2.0 * (float) nPoints)) * radius;
       float x = p.x;
       float y = 7 - p.y;  // Invert Y
       x *= s;

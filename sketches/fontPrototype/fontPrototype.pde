@@ -16,8 +16,8 @@ void settings() {
 
 void setup() {
   if (renderFont) {
-    createFont();
-    // createFontCircles();
+    // createFont();
+    createFontDots();
     // createFontTearDrop();
   }
   noLoop();
