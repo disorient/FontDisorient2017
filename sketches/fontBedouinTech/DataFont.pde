@@ -1,5 +1,4 @@
 class DataFont {
-  //private byte[] data;
   private char[] data;
   private int width;
   private int height = 8;

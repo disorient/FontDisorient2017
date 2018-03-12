@@ -83,6 +83,27 @@ class FontDisorient2017 {
     popStyle();
   }
 
+  ArrayList<ShapeType> getShapes(char c) {
+    ArrayList<ShapeType> list = new ArrayList<ShapeType>();
+    String types = "0123456";
+
+    if (fontDisorient2017.containsKey(c)) {
+      DataFont f = fontDisorient2017.get(c);
+      int w = f.getWidth();
+
+      for (int y = 0; y < 8; y++) {
+        for (int x = 0; x < w; x++) {
+          char type = f.get(x, y);
+          if (types.indexOf(type) >= 0) {
+            list.add(new ShapeType(type, x, y));
+          }
+        }
+      }
+    }
+
+    return list;
+  }
+
   ArrayList<PVector> getPoints(char c) {
     ArrayList<PVector> list = new ArrayList<PVector>();
 
@@ -134,10 +155,10 @@ class FontDisorient2017 {
       " 00!2-$$2-")));
 
     fontDisorient2017.put('b', new DataFont(String.join("\n", 
-      "xxxxxxxxx ", 
-      "xxxxxxxxxx", 
+      "0xxxxxxxx ", 
+      "1xxxxxxxxx", 
       "xx      xx", 
-      "xxxxxxxxxx", 
+      "2xxxxxxxxx", 
       "xxxxxxxxxx", 
       "xx      xx", 
       "xxxxxxxxxx", 
