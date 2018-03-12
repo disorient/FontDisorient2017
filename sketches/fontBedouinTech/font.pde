@@ -94,6 +94,44 @@ void createFont() {
         }
 
         glyph.addContour(points);
+       } else if (p.type == '2') {
+        FPoint[] points = new FPoint[nPoints + 2];
+        float x = p.x;
+        float y = 7 - p.y;  // Invert Y
+        x *= s;
+        y *= s;
+        x += s * 0.5;
+        y += s * 0.5;
+
+        for (int i = 0; i < nPoints / 2 + 1; i++) {
+          float n = (float) i / (float) nPoints;
+          float a = n * TAU + HALF_PI;
+
+          PVector point = PVector.fromAngle(a).mult(radius).add(x, y);
+          PVector cPoint1 = PVector.fromAngle(a - HALF_PI).mult(controlLength);
+          cPoint1 = point.copy().add(cPoint1);
+          PVector cPoint2 = PVector.fromAngle(a + HALF_PI).mult(controlLength);
+          cPoint2 = point.copy().add(cPoint2);
+
+          FPoint fp = new FPoint(point, cPoint1, cPoint2);
+          points[i] = fp;
+        }
+
+        for (int i = 0; i < nPoints / 2 + 1; i++) {
+          float n = (float) i / (float) nPoints;
+          float a = n * TAU + PI + HALF_PI;
+
+          PVector point = PVector.fromAngle(a).mult(radius).add(x + s, y);
+          PVector cPoint1 = PVector.fromAngle(a - HALF_PI).mult(controlLength);
+          cPoint1 = point.copy().add(cPoint1);
+          PVector cPoint2 = PVector.fromAngle(a + HALF_PI).mult(controlLength);
+          cPoint2 = point.copy().add(cPoint2);
+
+          FPoint fp = new FPoint(point, cPoint1, cPoint2);
+          points[i + nPoints / 2 + 1] = fp;
+        }
+
+        glyph.addContour(points);
       }
     }
   }
