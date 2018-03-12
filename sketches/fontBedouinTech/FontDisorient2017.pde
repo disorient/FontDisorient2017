@@ -185,14 +185,14 @@ class FontDisorient2017 {
       "0##02-^2- ")));
 
     fontDisorient2017.put('e', new DataFont(String.join("\n", 
-      " xxxxxxxx ", 
-      "xxxxxxxxxx", 
-      "xx      xx", 
-      "xxxxxxxxxx", 
-      "xxxxxxxxxx", 
-      "xx        ", 
-      "xxxxxxxxx ", 
-      " xxxxxxxx ")));
+      " 05%2-2-1 ", 
+      "2-%00000!0", 
+      "04      30", 
+      "$$005%2-##", 
+      "302-%00000", 
+      "##        ", 
+      "001110410 ", 
+      " 0!!!$$!0 ")));
 
     fontDisorient2017.put('f', new DataFont(String.join("\n", 
       " xxxxxxxxx", 
@@ -225,14 +225,14 @@ class FontDisorient2017 {
       "xx      xx")));
 
     fontDisorient2017.put('i', new DataFont(String.join("\n", 
-      "xx", 
-      "xx", 
+      "00", 
+      "2-", 
       "  ", 
-      "xx", 
-      "xx", 
-      "xx", 
-      "xx", 
-      "xx")));
+      "10", 
+      "!0", 
+      "00", 
+      "30", 
+      "##")));
 
     fontDisorient2017.put('j', new DataFont(String.join("\n", 
       "        xx", 
@@ -275,24 +275,24 @@ class FontDisorient2017 {
       "xx  xx  xx")));
 
     fontDisorient2017.put('n', new DataFont(String.join("\n", 
-      "xxxxxxxxx ", 
-      "xxxxxxxxxx", 
-      "xx      xx", 
-      "xx      xx", 
-      "xx      xx", 
-      "xx      xx", 
-      "xx      xx", 
-      "xx      xx")));
+      "006^5%003 ", 
+      "02-^%2-0##", 
+      "11      00", 
+      "!!      00", 
+      "10      00", 
+      "!0      00", 
+      "04      00", 
+      "$$      00")));
 
     fontDisorient2017.put('o', new DataFont(String.join("\n", 
-      " xxxxxxxx ", 
-      "xxxxxxxxxx", 
-      "xx      xx", 
-      "xx      xx", 
-      "xx      xx", 
-      "xx      xx", 
-      "xxxxxxxxxx", 
-      " xxxxxxxx ")));
+      " 2-05%301 ", 
+      "02-0%0##!0", 
+      "2-      6^", 
+      "6^      0^", 
+      "0^      00", 
+      "10      01", 
+      "!132-032-!", 
+      " !##00##0 ")));
 
     fontDisorient2017.put('p', new DataFont(String.join("\n", 
       "xxxxxxxxx ", 
@@ -315,34 +315,34 @@ class FontDisorient2017 {
       " xxxxxx   ")));
 
     fontDisorient2017.put('r', new DataFont(String.join("\n", 
-      "xxxxxxxxx ", 
-      "xxxxxxxxxx", 
-      "xx      xx", 
-      "xx      xx", 
-      "xxxxxxxxx ", 
-      "xxxxxxxxx ", 
-      "xx     xxx", 
-      "xx      xx")));
+      "0042-002- ", 
+      "1$$0002-2-", 
+      "!0      01", 
+      "5%      1!", 
+      "%102-02-! ", 
+      "0!2-2-000 ", 
+      "00     02-", 
+      "00      2-")));
 
     fontDisorient2017.put('s', new DataFont(String.join("\n", 
-      " xxxxxxxxx", 
-      "xxxxxxxxxx", 
-      "xx        ", 
-      "xxxxxxxxx ", 
-      " xxxxxxxxx", 
-      "        xx", 
-      "xxxxxxxxxx", 
-      "xxxxxxxxx ")));
+      " 05%2-3010", 
+      "2-%000##!0", 
+      "04        ", 
+      "$$00002-0 ", 
+      " -2-2-0000", 
+      "        2-", 
+      "001110415%", 
+      "00!!!$$!% ")));
 
     fontDisorient2017.put('t', new DataFont(String.join("\n", 
-      "xxxxxxxxxx", 
-      "xxxxxxxxxx", 
-      "    xx    ", 
-      "    xx    ", 
-      "    xx    ", 
-      "    xx    ", 
-      "    xx    ", 
-      "    xx    ")));
+      "2-005%2-2-", 
+      "002-%00000", 
+      "    01    ", 
+      "    0!    ", 
+      "    2-    ", 
+      "    6^    ", 
+      "    1^    ", 
+      "    !0    ")));
 
     fontDisorient2017.put('u', new DataFont(String.join("\n", 
       "xx      xx", 
