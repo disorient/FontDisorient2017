@@ -16,7 +16,7 @@ void createFont() {
   f.setAdvanceWidth(fWidth);
 
   float s = (float) fWidth / 10.0;
-  float radiusMult = 0.4;
+  float radiusMult = 0.45;
   float radius = s * radiusMult;
   int nPoints = 8;
   float controlLength = (4.0 / 3.0) * tan(PI / (2.0 * (float) nPoints)) * radius;
@@ -189,6 +189,72 @@ void createFont() {
         PVector point = new PVector(x + radius, y - s + radius);
         FPoint fp = new FPoint(point);
         fPointList.add(fp);
+
+        // Convert to FPoint primitive array
+        points = new FPoint[fPointList.size()];
+        for (int i = 0; i < fPointList.size(); i++) {
+          points[i] = fPointList.get(i);
+        }
+        glyph.addContour(points);
+      } else if (p.type == '4') {
+        ArrayList<FPoint> fPointList = new ArrayList<FPoint>(); 
+        FPoint[] points;
+        float x = p.x;
+        float y = 7 - p.y;  // Invert Y
+        x *= s;
+        y *= s;
+        x += s * 0.5;
+        y += s * 0.5;
+
+        for (int i = 0; i < nPoints / 2 + 1; i++) {
+          float n = (float) i / (float) nPoints;
+          float a = n * TAU;
+
+          PVector point = PVector.fromAngle(a).mult(radius).add(x, y);
+          PVector cPoint1 = PVector.fromAngle(a - HALF_PI).mult(controlLength);
+          cPoint1 = point.copy().add(cPoint1);
+          PVector cPoint2 = PVector.fromAngle(a + HALF_PI).mult(controlLength);
+          cPoint2 = point.copy().add(cPoint2);
+
+          FPoint fp = new FPoint(point, cPoint1, cPoint2);
+          fPointList.add(fp);
+        }
+        
+        {
+          // Corner
+          PVector point = new PVector(x - radius, y - s + radius);
+          FPoint fp = new FPoint(point);
+          fPointList.add(fp);
+        }
+
+        for (int i = 0; i < nPoints / 2 + 1; i++) {
+          float n = (float) i / (float) nPoints;
+          float a = n * TAU + HALF_PI;
+
+          PVector point = PVector.fromAngle(a).mult(radius).add(x - s, y - s);
+          PVector cPoint1 = PVector.fromAngle(a - HALF_PI).mult(controlLength);
+          cPoint1 = point.copy().add(cPoint1);
+          PVector cPoint2 = PVector.fromAngle(a + HALF_PI).mult(controlLength);
+          cPoint2 = point.copy().add(cPoint2);
+
+          FPoint fp = new FPoint(point, cPoint1, cPoint2);
+          fPointList.add(fp);
+        }
+
+        for (int i = 0; i < nPoints / 4 + 1; i++) {
+          float n = (float) i / (float) nPoints;
+          float a = n * TAU + 3 * HALF_PI;
+
+          PVector point = PVector.fromAngle(a).mult(radius).add(x, y - s);
+          PVector cPoint1 = PVector.fromAngle(a - HALF_PI).mult(controlLength);
+          cPoint1 = point.copy().add(cPoint1);
+          PVector cPoint2 = PVector.fromAngle(a + HALF_PI).mult(controlLength);
+          cPoint2 = point.copy().add(cPoint2);
+
+          FPoint fp = new FPoint(point, cPoint1, cPoint2);
+          fPointList.add(fp);
+        }
+
 
         // Convert to FPoint primitive array
         points = new FPoint[fPointList.size()];

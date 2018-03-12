@@ -175,14 +175,14 @@ class FontDisorient2017 {
       " xxxxxxxxx")));
 
     fontDisorient2017.put('d', new DataFont(String.join("\n", 
-      "xxxxxxxxx ", 
-      "xxxxxxxxxx", 
-      "xx      xx", 
-      "xx      xx", 
-      "xx      xx", 
-      "xx      xx", 
-      "xxxxxxxxxx", 
-      "xxxxxxxxx ")));
+      "0042-002- ", 
+      "1$$0002-2-", 
+      "!0      01", 
+      "5%      1!", 
+      "%1      !4", 
+      "0!      $$", 
+      "0302-6^2-0", 
+      "0##02-^2- ")));
 
     fontDisorient2017.put('e', new DataFont(String.join("\n", 
       " xxxxxxxx ", 
