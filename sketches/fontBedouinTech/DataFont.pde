@@ -14,7 +14,6 @@ class DataFont {
 
     // Init DataFont from string
     initDataFont(s);
-    print(data);
   }
 
   char get(int x, int y) {
