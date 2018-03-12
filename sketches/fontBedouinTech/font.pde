@@ -5,7 +5,7 @@ String fontVersion = "20180311";
 void createFont() {
   int fWidth = 1250;
   int version = 2;
-
+  
   if (f != null) {
     f.cleanup();
   }
@@ -16,6 +16,10 @@ void createFont() {
   f.setAdvanceWidth(fWidth);
 
   float s = (float) fWidth / 10.0;
+  float radiusMult = 0.4;
+  float radius = s * radiusMult;
+    int nPoints = 8;
+    float controlLength = (4.0 / 3.0) * tan(PI / (2.0 * (float) nPoints)) * radius;
 
   Enumeration<Character> keys = df.getKeys();
   while (keys.hasMoreElements()) {
@@ -26,9 +30,6 @@ void createFont() {
     float w = df.getCharWidth(c);
     glyph.setAdvanceWidth((int) (fWidth * w / 10.0 + fWidth * 0.1));
 
-    int nPoints = 8;
-    float radius = s * 0.5;
-    float controlLength = (4.0 / 3.0) * tan(PI / (2.0 * (float) nPoints)) * radius;
 
     for (ShapeType p : list) {
       if (p.type == '0') {
@@ -56,7 +57,7 @@ void createFont() {
 
         glyph.addContour(points);
       } else if (p.type == '1') {
-        FPoint[] points = new FPoint[nPoints];
+        FPoint[] points = new FPoint[nPoints + 2];
         float x = p.x;
         float y = 7 - p.y;  // Invert Y
         x *= s;
@@ -64,9 +65,9 @@ void createFont() {
         x += s * 0.5;
         y += s * 0.5;
 
-        for (int i = 0; i < nPoints / 2; i++) {
+        for (int i = 0; i < nPoints / 2 + 1; i++) {
           float n = (float) i / (float) nPoints;
-          float a = n * -TAU;
+          float a = n * TAU;
 
           PVector point = PVector.fromAngle(a).mult(radius).add(x, y);
           PVector cPoint1 = PVector.fromAngle(a - HALF_PI).mult(controlLength);
@@ -78,18 +79,18 @@ void createFont() {
           points[i] = fp;
         }
 
-        for (int i = 0; i < nPoints / 2; i++) {
+        for (int i = 0; i < nPoints / 2 + 1; i++) {
           float n = (float) i / (float) nPoints;
-          float a = n * -TAU + PI;
+          float a = n * TAU + PI;
 
-          PVector point = PVector.fromAngle(a).mult(radius).add(x, y + s);
+          PVector point = PVector.fromAngle(a).mult(radius).add(x, y - s);
           PVector cPoint1 = PVector.fromAngle(a - HALF_PI).mult(controlLength);
           cPoint1 = point.copy().add(cPoint1);
           PVector cPoint2 = PVector.fromAngle(a + HALF_PI).mult(controlLength);
           cPoint2 = point.copy().add(cPoint2);
 
           FPoint fp = new FPoint(point, cPoint1, cPoint2);
-          points[i + nPoints / 2] = fp;
+          points[i + nPoints / 2 + 1] = fp;
         }
 
         glyph.addContour(points);
