@@ -1,8 +1,8 @@
 /*
 Status: In Progress.
-Designed by: The Eye
-Programmed by: Jacob Joaquin
-*/
+ Designed by: The Eye
+ Programmed by: Jacob Joaquin
+ */
 
 import fontastic.*;
 
@@ -16,7 +16,7 @@ void settings() {
 
 void setup() {
   if (renderFont) {
-     createFont();
+    createFont();
   }
   noLoop();
   background(255);
