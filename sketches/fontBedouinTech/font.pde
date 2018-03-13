@@ -1,6 +1,6 @@
 Fontastic f;
-String fontAuthor = "The Eye";
-String fontVersion = "20180311";
+String fontAuthor = "The Eye and Nazeeb Nahas";
+String fontVersion = "20180313";
 
 void createFont() {
   int fWidth = 1250;
