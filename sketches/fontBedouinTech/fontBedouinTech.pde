@@ -24,16 +24,14 @@ void setup() {
   fill(0);
 
   df.setHeight(60);
-  df.text("abcdefghi", 10, 10);
-  df.text("jklmnopqr", 10, 80);
-  df.text("stuvwxyz", 10, 150);
-  df.text("ABCDEFGHI", 10, 220);
-  df.text("JKLMNOPQR", 10, 290);
-  df.text("STUVWXYZ", 10, 360);
-  df.text("1234567890", 10, 430);
-  df.text("~`!@#$%^&*()_", 10, 500);
-  df.text("-+=[{}]|\\:;'\"<>?,./", 10, 570);
-
+  df.text("abcdefg", 10, 10);
+  df.text("hijklmno", 10, 80);
+  df.text("pqrstuv", 10, 150);
+  df.text("wxyz", 10, 220);
+  df.text("12345678", 10, 290);
+  df.text("90`~!@#$%", 10, 360);
+  df.text("^&*()_+-=", 10, 430);
+  df.text("[{}];':\",.<>/?\\", 10, 500);
   save("dataFontLatest.png");
 }
 
