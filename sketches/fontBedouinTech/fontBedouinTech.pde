@@ -7,7 +7,7 @@ Programmed by: Jacob Joaquin
 import fontastic.*;
 
 FontDisorient2017 df = new FontDisorient2017();
-boolean renderFont = false;
+boolean renderFont = true;
 
 void settings() {
   size(900, 650);
