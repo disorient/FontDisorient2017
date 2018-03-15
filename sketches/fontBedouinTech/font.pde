@@ -4,7 +4,6 @@ String fontVersion = "20180313";
 
 void createFont() {
   int fWidth = 1250;
-  int version = 2;
 
   if (f != null) {
     f.cleanup();

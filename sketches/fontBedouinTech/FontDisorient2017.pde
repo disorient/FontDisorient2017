@@ -747,11 +747,11 @@ class FontDisorient2017 {
       "5%", 
       "%0", 
       "01", 
+      "1!", 
+      "!1", 
       "0!", 
-      "10", 
-      "!0", 
-      "04", 
-      "$$")));
+      "2-", 
+      "2-")));
 
     fontDisorient2017.put('\\', new DataFont(String.join("\n", 
       "00      ", 
