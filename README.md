@@ -2,11 +2,11 @@
 
 ## Download
 
-[Disorient_2017_Latest.zip](https://github.com/disorient/FontDisorient2017/raw/master/releases/Disorient_2017_Latest.zip) - Version 20170627
+[Disorient_2017_Latest.zip](https://github.com/disorient/FontDisorient2017/raw/master/releases/Disorient_2017_Latest.zip) - Version 20180315
 
 # About
 
-The "Disorient 2017" font (designed by The Eye and programmed by Jacob J.) is an update and a simplification of the Disorient font. In an effort to make the font more legible while keeping its distinctive character, many letters have been fine-tuned. Also, both upper and lower cases display the same character, so you really can't go wrong. We encourage the use of this font over previous versions.
+The **Disorient 2017** font (designed by The Eye and programmed by Jacob J.) is an update and a simplification of the Disorient font. The latest addition,**Disorient 2017 Bedouin Tech**, is designed by Nazeeb Nahas. In an effort to make the font more legible while keeping its distinctive character, many letters have been fine-tuned. Also, both upper and lower cases display the same character, so you really can't go wrong. We encourage the use of this font over previous versions.
 
 The Disorient logo is used on our Signs, D-shirt, Urn, Disorient Pattern, etc. Every Disorient camper is encouraged to use the Disorient logo and the Disorient font for Disorient-related projects.
 
