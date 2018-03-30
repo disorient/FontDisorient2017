@@ -27,25 +27,47 @@ void draw() {
   //  data.add(s);
   //}
 
-  // Create header
+  // Create font width array
+
+  // Create font array
   data.add("const uint16_t disorientFont2017[128][8] = {");
 
   for (int i = 0; i < 128; i++) {
-    Char c = Character.toString((char) i);
-    data.add(s);
+    char c = (char) i;
+    data.add("  {");
+
+    // In font set
+    if (df.isDefined(c)) {
+      DataFont letter = df.getDataFont(c);
+      int w = letter.getWidth();
+      
+      for (int y = 0; y < 8; y++) {
+        String s = "    0b";
+        
+        // Convert datafont to zeros and ones
+        for (int x = 0; x < w; x++) {
+          char n = letter.get(x, y) ? '1' : '0';
+          s += n;
+        }
+        
+        // Zero pad
+        for (int z = 0; z < 16 - w; z++) {
+          s += "0";
+        }
+        
+        s += ",";
+        data.add(s);
+      }
+    }
+    // Not in font set
+    else {
+      for (int j = 0; j < 8; j++) {
+        data.add("    0,");
+      }
+    }
+    data.add("  },");
+    //data.add(s);
   }
-
-  //{
-  //  0b0111110000000000,
-  //  0b1111111000000000,
-  //  0b1100011000000000,
-  //  0b1100011000000000,
-  //  0b1100011000000000,
-  //  0b1100011000000000,
-  //  0b1111111000000000,
-  //  0b0111110000000000,
-  //}
-
   data.add("};");
 
 

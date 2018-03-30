@@ -12,6 +12,14 @@ class FontDisorient2017 {
     init();
   }
 
+  boolean isDefined(char c) {
+    return fontDisorient2017.containsKey(c);
+  }
+  
+  DataFont getDataFont(char c) {
+    return fontDisorient2017.get(c);
+  }
+  
   void setHeight(float fontHeight) {
     this.fontHeight = fontHeight;
     this.pixelHeight = fontHeight / 8.0;
