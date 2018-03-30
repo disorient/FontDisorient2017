@@ -1,8 +1,19 @@
 #include <FastLED.h>
+#include "disfont2017.h"
+
+/*
+  byte array for each letter
+  width of each letter
+  array of bytes
+
+  do I class this?
+  do I struct this?
+
+*/
 
 #define COLOR_ORDER  GRB
 #define CHIPSET      WS2811
-#define BRIGHTNESS   64
+#define BRIGHTNESS   126
 
 const uint8_t STRIP_PIN_0 = 2;
 const uint8_t nPanels = 1;
@@ -29,16 +40,26 @@ void setup() {
   FastLED.setBrightness(BRIGHTNESS);
 }
 
+int xOffset = -10;
+
 void loop() {
   FastLED.clear();
 
-  for (int i = 0; i < nLEDs; i++) {
-    if (random(100) < 30) {
-      leds[i] = random(100) < 50 ? pink : orange;
+  for (int y = 0; y < 8; y++) {
+    uint16_t row = disorientFont2017[0][y];
+    for (int x = 0; x < 10; x++) {
+      int thisX = x + xOffset;
+      if (thisX >= 0 && thisX < panelWidth && (row >> (15 - x)) & 1) {
+        leds[XY(thisX, y)] = random(100) < 50 ? pink : orange;
+      }
     }
   }
 
+  xOffset++;
+  if (xOffset > panelWidth + 10) {
+    xOffset = -10;
+  }
   FastLED.show();
-  delay(500);
+  delay(20);
 }
 
