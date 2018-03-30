@@ -28,6 +28,33 @@ void draw() {
   //}
 
   // Create font width array
+  ArrayList<Integer> fontWidthList = new ArrayList<Integer>();
+  for (int i = 0; i < 128; i++) {
+    char c = (char) i;
+    int w = 0;
+    
+    // In font set
+    if (df.isDefined(c)) {
+      DataFont letter = df.getDataFont(c);
+      w = letter.getWidth();      
+    }
+    
+    // Add width
+    fontWidthList.add(w);
+  }
+
+  String fontWidthCode = "const uint8_t disorientFont2017Widths[128] = {";
+  for (int i = 0; i < fontWidthList.size(); i++) {
+    fontWidthCode += fontWidthList.get(i);
+    
+    if (i != fontWidthList.size() - 1) {
+      fontWidthCode += ", ";
+    }
+  }
+  fontWidthCode += "};";
+  data.add(fontWidthCode);
+  data.add("");
+  
 
   // Create font array
   data.add("const uint16_t disorientFont2017[128][8] = {");

@@ -46,7 +46,7 @@ void loop() {
   FastLED.clear();
 
   for (int y = 0; y < 8; y++) {
-    uint16_t row = disorientFont2017[0][y];
+    uint16_t row = disorientFont2017[(char) 'd'][y];
     for (int x = 0; x < 10; x++) {
       int thisX = x + xOffset;
       if (thisX >= 0 && thisX < panelWidth && (row >> (15 - x)) & 1) {
@@ -62,3 +62,4 @@ void loop() {
   FastLED.show();
   delay(20);
 }
+
