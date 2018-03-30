@@ -40,7 +40,7 @@ void setup() {
   FastLED.setBrightness(BRIGHTNESS);
 }
 
-int xOffset = -10;
+int xOffset = panelWidth + 10;
 
 void loop() {
   FastLED.clear();
@@ -55,11 +55,11 @@ void loop() {
     }
   }
 
-  xOffset++;
-  if (xOffset > panelWidth + 10) {
-    xOffset = -10;
+  xOffset--;
+  if (xOffset < -10) {
+    xOffset = panelWidth + 10;
   }
   FastLED.show();
-  delay(20);
+  delay(1000 / 30);
 }
 
